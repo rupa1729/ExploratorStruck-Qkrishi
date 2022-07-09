@@ -1,0 +1,24 @@
+<html>
+    <head>
+    <title>Image textures and materials</title>
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    </head>
+    
+    <body>
+        <a-scene>
+            <!--Asset management system-->
+            <a_assets>
+                <image id="texture-NRM" src="Texture_files/TexturesCom_Seawall_512_albedo_NRM.png"></image>
+                <image id="sci-fi" src="Texture_files/rust_metal_NRM.png"></image>
+            </a_assets>
+            <!--lightblue box-->
+            <a-box color="white" src="Texture_files/rust_metal.jpg" width="4" height="4" depth="4" repeat="1 1" normal-map="#sci-fi" normal-texture-repeat="1 1" normal-scale="1 1" roughness="0.9" position="-2 1.5 -9" scale="-1 1 1" >
+                
+            </a-box>
+            <!--brown box-->
+            <a-box color="white" src="Texture_files/TexturesCom_Seawall_512_albedo.jpg" width="4" height="4" depth="4" position="2 1.5 -9" repeat="1 1" normal-map="#texture-NRM" normal-texture-repeat="2 1" normal-scale="1 1" roughness="0.9" scale="-1 1 1"></a-box>
+            <!--blue sphere-->
+            <a-sphere material="color:blue;" position="-2 1.5 -9"></a-sphere>
+        </a-scene>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<html>
+    <head>
+    <title>Gates</title>
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    </head>
+    
+    <body>
+        <a-scene>
+            <a-sky color="blue"></a-sky>
+            <!--Asset management system-->
+            <a_assets>
+                <image id="X" src="mark.png"></image>
+                <image id="Z" src="z.png"></image>
+                 <image id="H" src="letter-h.png"></image>
+            </a_assets>
+            
+            <a-box color="white" src="#X"  position="-2 1.5 -9" scale="-1 1 1" side="double">  
+            </a-box>
+            <a-box color="white" src="#Z"  position="0 1.5 -9" scale="-1 1 1" side="double">  
+            </a-box>
+             <a-box color="white" src="#H"  position="3 1.5 -9" scale="-1 1 1" side="double">  
+            </a-box>
+        </a-scene>
+    </body>
+</html>

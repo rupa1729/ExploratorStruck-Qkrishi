@@ -1,0 +1,75 @@
+<html>
+    <head>
+    <title>First Puzzle</title>
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+         <script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
+    </head>
+    
+    <body>
+        <a-scene>
+            <a-sky color="#87CEEB"></a-sky>
+            <!--Asset management system-->
+            <a_assets>
+                <image id="X" src="mark.png"></image>
+                <image id="Z" src="letter-z.png"></image>
+                 <image id="H" src="letter-h.png"></image>
+                <image id="Texture" src="TexturesCom_Seawall_512_albedo.jpg">
+                </image>
+                <image id="rust" src="rust_metal.jpg"></image>
+                <image id="ket0" src="ket_0.png"></image>
+                <image id="ket1" src="ket_1.png"></image>
+                 <a-asset-item id="floor" src="floor.gltf"></a-asset-item>
+            </a_assets>
+            
+           <!--<a-box id="X" color="white" src="#X"  position="10 1.5 -9" side="double"> <a-animation event-set__move="_event:click" attribute="position" to="-3 5 -9" repeat="4" dur="2000" easing="linear"></a-animation>
+            </a-box>-->
+            
+            
+            
+            
+            
+            
+            <!-- Z gate-->
+            <a-box id="Z" color="white" src="#Z"  position="-5 1 -3" scale="-1 1 1" side="double" >
+                
+                
+            <!-- H gate-->
+            </a-box>
+             <a-box id="H" color="white" src="#H"  position="-6.5 1 -1" scale="-1 1 1" side="double" >  
+            </a-box>
+            
+             <!-- X gate-->
+          <a-box id="X" color="white" src="#X"  position="-3 1 0" side="double"  event-set__move="_event:click;position:-3 5 -9" event-set__clear="_event:click;_target:#door;opacity:0"> 
+            </a-box>
+            
+            
+             <!--Circuit-->
+            <a-box id="circuit" src="#Texture" color="white" height="0.2" width="10" depth="0.2" position="-3 5 -9"></a-box>
+            
+          <a-box id="empty" color="white" height="0.99" width="0.99" depth="0.99" position="-3 5 -9" scale="1 1 1" > </a-box>
+             <!-- ket 0 and ket 1-->
+            <a-image src="#ket0" position="3 5 -8.9" scale="1 1 1"></a-image>
+            <a-image src="#ket1" position="-9 5 -8.9" scale="1 1 1"></a-image>
+            
+            <!--door-->
+            <a-plane src="#rust" id="door" color="white" height="20" width="15" depth="0.2" position="-3 5 -9.1">
+                <!--<a-animation attribute="opacity" from="1" to="0" dur="4000" repeat="indefinite"></a-animation>-->
+            </a-plane>
+            
+            
+            <!--camera-->
+            <a-camera  user-height="5">
+                <!--<a-cursor></a-cursor>-->
+                <a-entity cursor position="0 0 -1" geometry="primitive:sphere;radius:0.005" material="color:red; shader:flat;opacity:1"></a-entity>
+            </a-camera>
+            
+            
+            
+            
+            
+             <!--floor-->
+            
+             <a-plane gltf-model="#floor" position="0 0 0" rotation="0 0 0" scale="500 500 500"></a-plane>
+        </a-scene>
+    </body>
+</html>

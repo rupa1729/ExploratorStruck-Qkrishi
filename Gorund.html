@@ -1,0 +1,21 @@
+<html>
+    <head>
+    <title>Ground</title>
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    </head>
+    
+    
+    <body>
+        <a-scene>
+            <a-assets>
+        
+            <img id="Floor" src="Floor.jpg">
+            <img id="Floor-NRM" src="Floor-NRM.png">
+                </a-assets>
+            
+            
+            <!--Ground-->
+            <a-plane material="color:white;src:#Floor;normal-map:#Floor-NRM;normal-texture-repeat:5 5" rotation="-90 0 0" scale="10 1 1"></a-plane>
+        </a-scene>
+    </body>
+</html>
